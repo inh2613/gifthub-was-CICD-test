@@ -101,7 +101,7 @@ public class AuthController {
 
 		refreshToken = refreshToken.substring(7);
 		refreshTokenService.storeRefreshToken(tokenDto, jwtProvider.getUsername(refreshToken));
-		System.out.println("test12");
+		System.out.println("test13");
 		return new ResponseEntity<>(
 				Message.builder()
 						.status(StatusEnum.OK)

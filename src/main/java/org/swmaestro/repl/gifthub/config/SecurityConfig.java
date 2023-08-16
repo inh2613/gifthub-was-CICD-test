@@ -48,7 +48,7 @@ public class SecurityConfig {
 								response.setCharacterEncoding("utf-8");
 								response.setContentType("text/html; charset=UTF-8");
 								response.getWriter().write("권한이 없습니다.");
-								Sentry.captureException(accessDeniedException);
+								// Sentry.captureException(accessDeniedException);
 							}
 						})
 						.authenticationEntryPoint(new AuthenticationEntryPoint() {
@@ -61,7 +61,7 @@ public class SecurityConfig {
 								response.setCharacterEncoding("utf-8");
 								response.setContentType("text/html; charset=UTF-8");
 								response.getWriter().write("인증되지 않은 사용자입니다.");
-								Sentry.captureException(authException);
+								// Sentry.captureException(authException);
 							}
 						})
 				);

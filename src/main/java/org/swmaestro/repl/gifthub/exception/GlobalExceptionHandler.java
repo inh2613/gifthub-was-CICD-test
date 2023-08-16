@@ -16,7 +16,7 @@ public class GlobalExceptionHandler {
 	@ExceptionHandler(BusinessException.class)
 	protected ResponseEntity<Message> handleBusinessException(final BusinessException e) {
 		log.error("handleEntityNotFoundException", e);
-		Sentry.captureException(e);
+		// Sentry.captureException(e);
 
 		return new ResponseEntity<>(
 				Message.builder()
